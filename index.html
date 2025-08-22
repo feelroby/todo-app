@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="container"> 
+            <h1>My Todo App</h1>
+
+            <div class="form">
+                <input id="todo-input" type="text" placeholder="Tambahkan Kegiatan...">
+                <button id="btn" type="button">Add</button>
+            </div>
+        </div>
+
+        <div class="cont-kaban" >
+            <div class="kaban-board"id="backlog">
+                <header>Backlog</header>
+                <ul id="todo-list-backlog"></ul>
+            </div>
+            <div class="kaban-board" id="doing">
+                <header>Doing</header>
+                <ul id="todo-list-doing"></ul>
+            </div>
+            <div class="kaban-board" id="review">
+                <header>Review</header>
+                <ul id="todo-list-review"></ul>
+            </div>
+            <div class="kaban-board" id="done">
+                <header>Done</header>
+                <ul id="todo-list-done"></ul>
+            </div>
+        </div>
+
+        <div id="popUp">
+            <button style="background-color: #111827b3;" id="backlogbtn">Backlog</button>
+            <button style="background-color: #1e3b8ab3;" id="doingbtn">Doing</button>
+            <button style="background-color: #312E81b3;" id="reviewbtn">Review</button>
+            <button style="background-color: #14532Db3;" id="donebtn">Done</button>
+            <button id="x">X</button>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

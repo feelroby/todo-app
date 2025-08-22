@@ -1,0 +1,244 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    background-color: #0B0F1A;
+    color: #e5e7eb;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column  ;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+}
+
+.container {
+    padding-block: 40px;
+    padding-inline: 60px;
+    width: 70%;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1); /* transparan */
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%); /* Safari support */
+    border: 0.5px solid rgba(255, 255, 255, 0.2); /* garis tipis semi transparan */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container h1 {
+    font-size: 3rem;
+    margin-bottom: 70px;
+    
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    justify-content: center;
+}
+
+.form input {
+    background-color: #111827;
+    padding: 20px;
+    color: #e5e7eb;
+    border-color:#1f2937;
+    border-style: solid;
+    border-radius: 50px;
+    width: 80%;
+    font-size:20px;
+    transition: all 0.1s ease-in;
+}
+
+input:focus {
+    outline: none;
+    scale: 1.02;
+}
+
+.form button {
+    background-color: #111827;
+    padding: 20px;
+    padding-inline: 30px;
+    color: #e5e7eb;
+    border-color:#1f2937;
+    border-radius: 50px;
+    border-style: solid;
+
+    font-size: 20px;
+
+    transition: 0.1s ease-in;
+}
+
+.form button:hover {
+    cursor: pointer;
+    scale: 1.05;
+}
+
+.form button:active {
+    background-color: #1f2937;
+}
+
+.cont-kaban {
+    display: flex;
+    gap: 10px;
+    width: 76.5%;
+    padding: 0;
+    margin: 30px;
+}
+
+.kaban-board {
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-inline: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1); /* transparan */
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%); /* Safari support */
+    border: 0.5px solid rgba(255, 255, 255, 0.2); /* garis tipis semi transparan */
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+}
+
+.kaban-board header {
+    width: 100%;
+    font-size: 25px;
+    border-radius: 500px;
+    padding: 10px;
+}
+
+#backlog header{
+    background-color: #111827;
+}
+#doing header{
+    background-color: #1E3A8A;
+}
+#review header{
+    background-color: #312E81;
+}
+#done header{
+    background-color: #14532D;
+}
+
+.kaban-board ul {
+    width: 100%;
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #181e24;
+    min-height: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-bottom: 20px;
+}
+
+
+#popUp {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    position:fixed;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 400px;
+    width: 400px;
+
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%); 
+    border: 0.5px solid rgba(255, 255, 255, 0.2); 
+
+    padding: 50px;
+    border-radius: 20px;
+
+    opacity: 0;
+    transform: scale(0.1);
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    pointer-events: none;
+}
+
+#popUp button {
+    font-size: 20px;
+    border-radius: 20px;
+    border: none;
+    color: #e5e7eb;
+    font-weight: 500;
+    transition: all 0.1s ease-in;
+}
+
+#popUp button:hover {
+    cursor: pointer;
+    scale: 1.05;
+} 
+
+#x {
+    display: block;
+    position: fixed;
+    top:5px;
+    right: 5px;
+    color: #0B0F1A;
+    background-color: #1118279b;
+    padding-inline: 20px;
+    padding-block: 10px;
+
+    transition: all 0.1s ease-in;
+   
+}
+
+#x:hover {
+    background-color: #1118272d;
+    cursor: pointer;
+     scale: 1.05;
+}
+
+#popUp.open {
+    display: grid;
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+
+
+.cont-kaban ul li {
+    list-style: none;
+    padding: 10px;
+    margin: 10px 0;
+    transition: all 0.1s ease-in-out;
+    border-bottom: #e5e7eb84 solid 2px;
+    width: 70%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content:center;
+}
+
+.cont-kaban button {
+   background-color: #1c394a00;
+   margin-bottom: 0;
+   color: white;
+   border: none;
+   right: 50px;
+   position: absolute;
+   transition: all 0.1s ease-in;
+}
+
+.cont-kaban button:hover {
+    cursor: pointer;
+    scale: 1.5;
+    color: #f6ccb3;
+    font-weight: 700;
+}
